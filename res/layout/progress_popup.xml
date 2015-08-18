@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:orientation="vertical" 
+	android:background="@drawable/command_border"
+	android:gravity="center"
+	android:padding="20dp">
+
+    <TextView
+        android:id="@+id/popupProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading registers. Please wait ..." 
+        android:padding="20dp"/>
+ 
+     <Button
+        android:id="@+id/okpopupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="OK"
+        android:onClick="okpopupbuttonHandler"
+        android:background="@drawable/button_rounded"        
+        android:visibility="invisible"/>
+    
+    
+</LinearLayout>

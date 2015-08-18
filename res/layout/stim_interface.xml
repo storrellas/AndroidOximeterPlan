@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#3D3D3D"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+     
+     <com.androidplot.xy.XYPlot
+        android:id="@+id/stimPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        title="Dynamic Plot" />
+        
+  	<LinearLayout
+	    android:id="@+id/SessionsHolderLayout"
+	    android:layout_width="fill_parent"
+		android:layout_height="280dp"
+	    android:gravity="center"
+	    android:orientation="horizontal">
+
+		<LinearLayout
+		    android:id="@+id/SessionsLayout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_margin="40dp"
+		    android:background="@drawable/command_border"
+		    android:orientation="vertical"
+			android:gravity="center" 
+			android:padding="20dp">
+
+			<ScrollView
+             	android:id="@+id/SessionsScrollView"
+             	android:layout_width="fill_parent"
+             	android:layout_height="fill_parent">
+
+				<LinearLayout
+				    android:id="@+id/SessionsContainer"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:orientation="vertical">	
+				    <!-- Sessions will be added here  -->			    				    
+				</LinearLayout>
+
+			</ScrollView>             
+ 			
+		</LinearLayout>
+
+  	</LinearLayout>
+  	
+	<LinearLayout
+	    android:id="@+id/CommandsLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:orientation="horizontal">
+
+
+	   	<LinearLayout
+	   	    android:id="@+id/CommandsLayout"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="fill_parent"
+	   	    android:gravity="center"
+	   	    android:orientation="horizontal"
+	   	    android:paddingBottom="20dp"
+	   	    android:paddingLeft="40dp"
+	   	    android:paddingRight="40dp"
+	   	    android:paddingTop="20dp" 
+	   	    android:background="@drawable/command_border">
+	    
+		        <Button
+		            android:id="@+id/openDeviceButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:onClick="openDeviceHandle"
+					android:text="OpenDevice"
+					android:background="@drawable/button_rounded" 
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:layout_marginRight="5dp"/>
+		
+		        <Button
+		            android:id="@+id/launchStimulationButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:text="Launch Stimulation" 
+		            android:onClick="launchStimulationHandle"				
+		            android:background="@drawable/button_rounded" 
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:layout_marginRight="5dp"/>
+
+		
+		        <Button
+		            android:id="@+id/closeDeviceButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:text="CloseDevice" 
+		            android:onClick="closeDeviceHandle"
+					android:background="@drawable/button_rounded" 
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:layout_marginRight="5dp"/>
+		        
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:layout_marginRight="5dp"
+		            android:background="@drawable/button_rounded"
+		            android:gravity="center_vertical"
+		            android:orientation="horizontal"
+		            android:padding="20dp" >
+
+		            <View
+		                android:id="@+id/device_status"
+		                android:layout_width="25dp"
+		                android:layout_height="13dp"
+		                android:background="@drawable/status_rounded" />
+
+		            <EditText
+		                android:id="@+id/macAddressText"
+		                android:layout_width="160dp"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="10dp"
+		                android:background="@drawable/border"
+		                android:paddingLeft="5dp"
+		                android:ems="10" />
+		        </LinearLayout>
+	 
+				<Button
+		            android:id="@+id/exitAppButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:text="Exip App" 
+		            android:onClick="exitAppHandle"
+					android:background="@drawable/button_rounded" 
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"/>
+	    
+			</LinearLayout> <!-- Linear Layout containing the commands  -->
+    </LinearLayout> <!-- Linear Layout layer -->               
+           
+</LinearLayout>
