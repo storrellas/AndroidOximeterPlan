@@ -1,4 +1,4 @@
 AndroidStimNIC
 ==============
 
-Android version of NIC for stimulating
+Android version of OXymeter for stimulating
