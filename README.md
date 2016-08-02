@@ -1,4 +1,4 @@
-AndroidStimNIC
+AndroidOxymeterPlan
 ==============
 
-Android version of OXymeter for stimulating
+Android version of Oxymeter for planning
