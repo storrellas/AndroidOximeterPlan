@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.bluetooth;
+package com.icognos.stim.bluetooth;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,10 +22,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.SystemClock;
 
-import com.neuroelectrics.stim.deviceManager.DeviceManager;
-import com.neuroelectrics.stim.deviceManager.iHandler.IScanDiscoveryFinishedHandler;
-import com.neuroelectrics.stim.util.Logger;
-import com.neuroelectrics.stim.util.Reference;
+import com.icognos.stim.deviceManager.DeviceManager;
+import com.icognos.stim.deviceManager.iHandler.IScanDiscoveryFinishedHandler;
+import com.icognos.stim.util.Logger;
+import com.icognos.stim.util.Reference;
 
 public class BluetoothManager implements INICBluetooth{
 

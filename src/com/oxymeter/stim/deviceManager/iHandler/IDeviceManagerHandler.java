@@ -1,6 +1,6 @@
-package com.neuroelectrics.stim.deviceManager.iHandler;
+package com.icognos.stim.deviceManager.iHandler;
 
-import com.neuroelectrics.stim.deviceManager.ChannelData;
+import com.icognos.stim.deviceManager.ChannelData;
 
 
 public interface IDeviceManagerHandler {

@@ -1,8 +1,8 @@
-package com.neuroelectrics.stim.deviceManager;
+package com.icognos.stim.deviceManager;
 
 
 
-import com.neuroelectrics.stim.util.Logger;
+import com.icognos.stim.util.Logger;
 
 public class SampleRateCorrector {
 

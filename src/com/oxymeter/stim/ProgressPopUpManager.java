@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim;
+package com.icognos.stim;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -15,7 +15,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 
-import com.neuroelectrics.stim.util.Logger;
+import com.icognos.stim.util.Logger;
 
 public class ProgressPopUpManager {
 

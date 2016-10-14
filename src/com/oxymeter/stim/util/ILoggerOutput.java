@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.util;
+package com.icognos.stim.util;
 
 public interface ILoggerOutput {
 	public void setVisualLog(String msg);

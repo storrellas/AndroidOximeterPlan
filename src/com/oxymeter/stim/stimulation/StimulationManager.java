@@ -1,15 +1,15 @@
-package com.neuroelectrics.stim.stimulation;
+package com.icognos.stim.stimulation;
 
 import java.util.Arrays;
 
 import android.util.Log;
 
 
-import com.neuroelectrics.stim.deviceManager.DeviceManager;
-import com.neuroelectrics.stim.deviceManager.DeviceRegisters;
-import com.neuroelectrics.stim.stimulation.iHandler.IStimulationHandler;
-import com.neuroelectrics.stim.util.Logger;
-import com.neuroelectrics.stim.util.Reference;
+import com.icognos.stim.deviceManager.DeviceManager;
+import com.icognos.stim.deviceManager.DeviceRegisters;
+import com.icognos.stim.stimulation.iHandler.IStimulationHandler;
+import com.icognos.stim.util.Logger;
+import com.icognos.stim.util.Reference;
 
 public class StimulationManager {
 

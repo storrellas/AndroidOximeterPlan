@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.deviceManager;
+package com.icognos.stim.deviceManager;
 
 public class StarStimRegister {
 

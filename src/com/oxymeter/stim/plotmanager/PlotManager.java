@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.plotmanager;
+package com.icognos.stim.plotmanager;
 
 import java.text.DecimalFormat;
 import java.util.Observable;
@@ -12,7 +12,7 @@ import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.LineAndPointFormatter;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYStepMode;
-import com.neuroelectrics.stim.util.Logger;
+import com.icognos.stim.util.Logger;
 
 public class PlotManager {
 	

@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.stimulation;
+package com.icognos.stim.stimulation;
 
 import java.util.ArrayList;
 
@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.neuroelectrics.stim.R;
-import com.neuroelectrics.stim.UIElement;
-import com.neuroelectrics.stim.util.Logger;
+import com.icognos.stim.R;
+import com.icognos.stim.UIElement;
+import com.icognos.stim.util.Logger;
 
 public class NubeConnector {
 

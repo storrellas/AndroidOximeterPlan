@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim;
+package com.icognos.stim;
 
 import com.androidplot.xy.XYPlot;
 

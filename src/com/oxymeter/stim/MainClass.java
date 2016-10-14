@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim;
+package com.icognos.stim;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,22 +32,22 @@ import android.widget.Toast;
 import com.androidplot.LineRegion;
 import com.androidplot.xy.XYPlot;
 
-import com.neuroelectrics.stim.R;
-import com.neuroelectrics.stim.bluetooth.BluetoothManager;
-import com.neuroelectrics.stim.deviceManager.ChannelData;
-import com.neuroelectrics.stim.deviceManager.DeviceManager;
-import com.neuroelectrics.stim.deviceManager.DeviceRegisters;
-import com.neuroelectrics.stim.deviceManager.StarStimProtocol;
-import com.neuroelectrics.stim.deviceManager.DeviceManager.OpenErrorTypes;
-import com.neuroelectrics.stim.deviceManager.iHandler.IDeviceManagerHandler;
-import com.neuroelectrics.stim.deviceManager.iHandler.IScanDiscoveryFinishedHandler;
-import com.neuroelectrics.stim.plotmanager.PlotManager;
-import com.neuroelectrics.stim.stimulation.NubeConnector;
-import com.neuroelectrics.stim.stimulation.StimulationManager;
-import com.neuroelectrics.stim.stimulation.iHandler.IStimulationHandler;
-import com.neuroelectrics.stim.util.ILoggerOutput;
-import com.neuroelectrics.stim.util.Logger;
-import com.neuroelectrics.stim.util.Reference;
+import com.icognos.stim.R;
+import com.icognos.stim.bluetooth.BluetoothManager;
+import com.icognos.stim.deviceManager.ChannelData;
+import com.icognos.stim.deviceManager.DeviceManager;
+import com.icognos.stim.deviceManager.DeviceRegisters;
+import com.icognos.stim.deviceManager.StarStimProtocol;
+import com.icognos.stim.deviceManager.DeviceManager.OpenErrorTypes;
+import com.icognos.stim.deviceManager.iHandler.IDeviceManagerHandler;
+import com.icognos.stim.deviceManager.iHandler.IScanDiscoveryFinishedHandler;
+import com.icognos.stim.plotmanager.PlotManager;
+import com.icognos.stim.stimulation.NubeConnector;
+import com.icognos.stim.stimulation.StimulationManager;
+import com.icognos.stim.stimulation.iHandler.IStimulationHandler;
+import com.icognos.stim.util.ILoggerOutput;
+import com.icognos.stim.util.Logger;
+import com.icognos.stim.util.Reference;
 
 public class MainClass extends Activity implements IScanDiscoveryFinishedHandler, ILoggerOutput, IDeviceManagerHandler, IStimulationHandler{
 
@@ -217,7 +217,7 @@ public class MainClass extends Activity implements IScanDiscoveryFinishedHandler
 	 * @param view
 	 */
 	public void openDeviceHandle(View view){
-		Log.w("com.neuroelectrics", "Clicked OpenDevice");	
+		Log.w("com.icognos", "Clicked OpenDevice");	
 		
 		logger.info("Clicked Open device", Logger.LOG_FILE_ON );
 			    	
@@ -345,7 +345,7 @@ public class MainClass extends Activity implements IScanDiscoveryFinishedHandler
 	 * @param view
 	 */
 	public void closeDeviceHandle(View view){
-		Log.w("com.neuroelectrics", "Clicked CloseDevice");
+		Log.w("com.icognos", "Clicked CloseDevice");
 				
     	logger.info("Closing device", Logger.LOG_FILE_ON);
     	

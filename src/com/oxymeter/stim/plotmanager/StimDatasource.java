@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.plotmanager;
+package com.icognos.stim.plotmanager;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.Observer;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
 
 import com.androidplot.xy.XYSeries;
-import com.neuroelectrics.stim.util.Logger;
+import com.icognos.stim.util.Logger;
 
 public class StimDatasource implements Runnable, XYSeries, Datasource{
 

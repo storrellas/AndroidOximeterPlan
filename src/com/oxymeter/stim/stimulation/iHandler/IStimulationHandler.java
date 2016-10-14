@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.stimulation.iHandler;
+package com.icognos.stim.stimulation.iHandler;
 
 public interface IStimulationHandler {
 	public void notifyStimulationStarted();

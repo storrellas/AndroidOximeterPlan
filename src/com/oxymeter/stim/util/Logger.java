@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.util;
+package com.icognos.stim.util;
 
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -29,7 +29,7 @@ public class Logger {
 	public static final int LOG_FILE_ON          = 0x10;
 	public static final int ONLY_ANDROID_CONSOLE = 0x00;
 	
-	public static String logAppName = "com.neuroelectrics";
+	public static String logAppName = "com.icognos";
 	
 	// Logger public logger
 	public static Logger logger = null;

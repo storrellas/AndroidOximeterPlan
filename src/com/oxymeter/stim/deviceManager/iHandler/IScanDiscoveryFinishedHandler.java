@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.deviceManager.iHandler;
+package com.icognos.stim.deviceManager.iHandler;
 
 import java.util.ArrayList;
 

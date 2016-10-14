@@ -1,9 +1,9 @@
-package com.neuroelectrics.stim.bluetooth;
+package com.icognos.stim.bluetooth;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.neuroelectrics.stim.util.Reference;
+import com.icognos.stim.util.Reference;
 
 public interface INICBluetooth {
 
