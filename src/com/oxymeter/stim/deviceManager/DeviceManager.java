@@ -1,4 +1,4 @@
-package com.neuroelectrics.stim.deviceManager;
+package com.icognos.stim.deviceManager;
 
 
 import java.io.IOException;
@@ -10,11 +10,11 @@ import java.util.Calendar;
 import android.app.Activity;
 import android.os.SystemClock;
 
-import com.neuroelectrics.stim.bluetooth.BluetoothManager;
-import com.neuroelectrics.stim.deviceManager.iHandler.IDeviceManagerHandler;
-import com.neuroelectrics.stim.deviceManager.iHandler.IScanDiscoveryFinishedHandler;
-import com.neuroelectrics.stim.util.Logger;
-import com.neuroelectrics.stim.util.Reference;
+import com.icognos.stim.bluetooth.BluetoothManager;
+import com.icognos.stim.deviceManager.iHandler.IDeviceManagerHandler;
+import com.icognos.stim.deviceManager.iHandler.IScanDiscoveryFinishedHandler;
+import com.icognos.stim.util.Logger;
+import com.icognos.stim.util.Reference;
 
 public class DeviceManager implements Runnable {
 
