@@ -1655,7 +1655,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     *It builds an Enobio3G/StarStim frame request for starting the EEG
+     *It builds an Enzo3G/StarStim frame request for starting the EEG
      *streaming.
      *
      * \return Byte array that contains the request.
@@ -1688,7 +1688,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     *It builds an Enobio3G/ StarStim frame request for stopping the EEG
+     *It builds an Enzo3G/ StarStim frame request for stopping the EEG
      *streaming.
      *
      * \return Byte array that contains the request.
@@ -1882,7 +1882,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StarStim frame request for reading a EEG
+     * It builds an Enzo3G/StarStim frame request for reading a EEG
      * configuration register.
      *
      * \param address Address of the EEG register.
@@ -1918,7 +1918,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StarStim frame request for reading an
+     * It builds an Enzo3G/StarStim frame request for reading an
      * accelerometer configuration register.
      *
      * \param address Address of the accelerometer register.
@@ -1992,7 +1992,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StarStim frame request for writing a EEG
+     * It builds an Enzo3G/StarStim frame request for writing a EEG
      * configuration register.
      *
      * \param address Address of the EEG register.
@@ -2030,7 +2030,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StarStim frame request for writing an
+     * It builds an Enzo3G/StarStim frame request for writing an
      * accelerometer configuration register.
      *
      * \param address Address of the accelerometer register.
@@ -2124,7 +2124,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StarStim frame request for the battery
+     * It builds an Enzo3G/StarStim frame request for the battery
      * measurement.
      *
      * \return Byte array that contains the request.
@@ -2156,7 +2156,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StarStim frame request for keeping the
+     * It builds an Enzo3G/StarStim frame request for keeping the
      * communication alive.
      *
      * \return Byte array that contains the request.
@@ -2180,7 +2180,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     *It builds an Enobio3G/StarStim frame request for getting the firmware
+     *It builds an Enzo3G/StarStim frame request for getting the firmware
      *version of the device and the battery.
      *
      * \return Byte array that contains the request.
@@ -2212,7 +2212,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     *It builds an Enobio3G/StarStim frame request for getting the firmware
+     *It builds an Enzo3G/StarStim frame request for getting the firmware
      *version of the device.
      *
      * \return Byte array that contains the request.
@@ -2244,7 +2244,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StartStim frame that requests starting the sending
+     * It builds an Enzo3G/StartStim frame that requests starting the sending
      * of beacons.
      *
      * \return Byte array that contains the request.
@@ -2271,7 +2271,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StartStim frame that requests stopping the sending
+     * It builds an Enzo3G/StartStim frame that requests stopping the sending
      * of beacons.
      *
      * \return Byte array that contains the request.
@@ -2297,7 +2297,7 @@ public class StarStimProtocol {
     }
 
     /*!
-     * It builds an Enobio3G/StartStim frame that requests a rename on the radio
+     * It builds an Enzo3G/StartStim frame that requests a rename on the radio
      *
      * \param name Targetted name for the radio
      *
@@ -2347,7 +2347,7 @@ public class StarStimProtocol {
     
     
     /*!
-     * It sets the firmware version of the Enobio3G/StartStim.
+     * It sets the firmware version of the Enzo3G/StartStim.
      *
      * \param firmwareVersion.
      */

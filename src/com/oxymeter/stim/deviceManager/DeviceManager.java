@@ -48,7 +48,7 @@ public class DeviceManager implements Runnable {
 	 */
 	private Activity _activity;
 	private IScanDiscoveryFinishedHandler _scanDiscoveryFinishedHandler;
-	private IDeviceManagerHandler _enobioHandler;
+	private IDeviceManagerHandler _enzoHandler;
 	
 	
 	/*
@@ -128,14 +128,14 @@ public class DeviceManager implements Runnable {
 	 * ! \property DeviceManager::_device
 	 * 
 	 * Instance of the bluetooth rfcomm device to communicate with the
-	 * Enobio3G/StarStim device.
+	 * Enzo3G/StarStim device.
 	 */
 	private RFCOMMDevice _device;
 
 	/*
 	 * ! \property DeviceManager::_protocol
 	 * 
-	 * Parser of the Enobio3G/StarStim protocol.
+	 * Parser of the Enzo3G/StarStim protocol.
 	 */
 	public StarStimProtocol _protocol;
 
@@ -149,7 +149,7 @@ public class DeviceManager implements Runnable {
 	/*
 	 * ! \property DeviceManager::_isDevicePresent
 	 * 
-	 * Boolean that informs whether an Enobio3G/StarStim is detected on the
+	 * Boolean that informs whether an Enzo3G/StarStim is detected on the
 	 * rfcomm device.
 	 */
 	private boolean _isDevicePresent;
@@ -483,7 +483,7 @@ public class DeviceManager implements Runnable {
 	/*
 	 * ! Public Constructor
 	 */
-	public DeviceManager( Activity activity, IScanDiscoveryFinishedHandler scanDiscoveryFinishedHandler, IDeviceManagerHandler enobioHandler ) {
+	public DeviceManager( Activity activity, IScanDiscoveryFinishedHandler scanDiscoveryFinishedHandler, IDeviceManagerHandler enzoHandler ) {
 		logger = Logger.getInstance();
 
 		// Initialised in the begginning
@@ -521,7 +521,7 @@ public class DeviceManager implements Runnable {
 		_device = new RFCOMMDevice(activity, scanDiscoveryFinishedHandler);
 		_protocol = new StarStimProtocol( StarStimProtocol.EEGCompressionType.EEG_NO_COMPRESSION );
 		_btManager = BluetoothManager.getInstance(activity, scanDiscoveryFinishedHandler);		
-		_enobioHandler = enobioHandler;
+		_enzoHandler = enzoHandler;
 		_activity      = activity;
 		_scanDiscoveryFinishedHandler = scanDiscoveryFinishedHandler;
 
@@ -755,7 +755,7 @@ public class DeviceManager implements Runnable {
 	// bool closeDeviceWithoutPollStop();
 
 	/*
-	 * ! It sends a request to the Enobio3G/StarStim to start the EEG streaming.
+	 * ! It sends a request to the Enzo3G/StarStim to start the EEG streaming.
 	 * 
 	 * \return True if the request has been correctly received by the device,
 	 * false otherwise.
@@ -794,7 +794,7 @@ public class DeviceManager implements Runnable {
 	}
 
 	/*
-	 * ! It sends a request to the Enobio3G/StarStim to stop the EEG streaming.
+	 * ! It sends a request to the Enzo3G/StarStim to stop the EEG streaming.
 	 * 
 	 * \param doStopAccelerometer In case that the Accelerometer is on,
 	 * indicates if it should be stopped or not (useful for SDCard recording)
@@ -803,7 +803,7 @@ public class DeviceManager implements Runnable {
 	 * false otherwise.
 	 */
 	/*
-	 * ! It sends a request to the Enobio3G/StarStim to stop the EEG streaming.
+	 * ! It sends a request to the Enzo3G/StarStim to stop the EEG streaming.
 	 * 
 	 * \param doStopAccelerometer In case that the Accelerometer is on,
 	 * indicates if it should be stopped or not (useful for SDCard recording)
@@ -1292,7 +1292,7 @@ public class DeviceManager implements Runnable {
 
 	/*
 	 * ! This static method performs a scan of the neigborhood for on-line
-	 * Enobio2G/StarStim devices. The result of the scannig can be obtained from
+	 * Enzo2G/StarStim devices. The result of the scannig can be obtained from
 	 * the DeviceManager::getNumberOfNotPairedDevices() and
 	 * DeviceManager::getPairedDeviceInfo() methods.
 	 * 
@@ -1320,7 +1320,7 @@ public class DeviceManager implements Runnable {
 	}
 
 	/*
-	 * ! This static method provides the number of Enobio3G/StarStim devices
+	 * ! This static method provides the number of Enzo3G/StarStim devices
 	 * that are already paired with local Bluetooth stack.
 	 * 
 	 * \return Number of already paired devices on the system.
@@ -1348,7 +1348,7 @@ public class DeviceManager implements Runnable {
 	}
 
 	/*
-	 * ! This static method provides the number of Enobio3G/StarStim devices
+	 * ! This static method provides the number of Enzo3G/StarStim devices
 	 * that are remembered by local Bluetooth stack.
 	 * 
 	 * \return Number of already paired devices on the system.
@@ -1463,7 +1463,7 @@ public class DeviceManager implements Runnable {
 	}
 
 	/*
-	 * ! This static method provided the number of not paired Enobio3G/StarStim
+	 * ! This static method provided the number of not paired Enzo3G/StarStim
 	 * devices that have been detected in an early call to the
 	 * DeviceManager::scanBT() method.
 	 * 
@@ -1855,10 +1855,10 @@ public class DeviceManager implements Runnable {
 	// -------------------------------PRIVATE:
 
 	/*
-	 * ! It determines whether there is an Enobio3G/StarStim device at the other
+	 * ! It determines whether there is an Enzo3G/StarStim device at the other
 	 * side of the rfcomm connection.
 	 * 
-	 * \return True if an Enobio3G/StarStim device is detected , false
+	 * \return True if an Enzo3G/StarStim device is detected , false
 	 * otherwise.
 	 */
 	public boolean _lookForStarStim() {
@@ -2101,8 +2101,8 @@ public class DeviceManager implements Runnable {
 										 		, Logger.LOG_FILE_ON);
 
 								 //emit newPacketLossData(_countPacketsLostPer30Seconds*100.0/_countPacketsPer30Seconds);
-//								 if( _enobioHandler != null){
-//									 _enobioHandler.newPacketLossData(_countPacketsLostPer30Seconds*100.0/_countPacketsPer30Seconds);
+//								 if( _enzoHandler != null){
+//									 _enzoHandler.newPacketLossData(_countPacketsLostPer30Seconds*100.0/_countPacketsPer30Seconds);
 //								 }
 								 
 
@@ -2220,8 +2220,8 @@ public class DeviceManager implements Runnable {
 									 _lastEEGData.setTimestamp(_currentTimestamp);
 									 _lastEEGData.setRepeated(true);
 									 //emit newEEGData(_lastEEGData);
-									 if( this._enobioHandler != null )
-										 _enobioHandler.newEEGData( _lastEEGData );
+									 if( this._enzoHandler != null )
+										 _enzoHandler.newEEGData( _lastEEGData );
 								 }
 
 							 }
@@ -2255,9 +2255,9 @@ public class DeviceManager implements Runnable {
 								 _lastEEGData = data.eegDataArray().get(j);
 								 _lastEEGData.setRepeated(false);
 								 //emit newEEGData(_lastEEGData);
-								 if( this._enobioHandler != null ){
-//									 _enobioHandler.newEEGData( new ChannelData() );
-									 _enobioHandler.newEEGData( _lastEEGData );
+								 if( this._enzoHandler != null ){
+//									 _enzoHandler.newEEGData( new ChannelData() );
+									 _enzoHandler.newEEGData( _lastEEGData );
 //									 if( _lastEEGData == null ) logger.info("Last eeg data NULL", Logger.LOG_FILE_ON);
 //									 else logger.info("Last eeg data NOT NULL", Logger.LOG_FILE_ON);
 								 }
@@ -2301,8 +2301,8 @@ public class DeviceManager implements Runnable {
 						 logger.info( "Is battery present " + String.format("0x%08X", data.battery() ), Logger.LOG_FILE_ON );
 						 logger.info( "Is battery present " + _calcStOfCharge(data.battery()), Logger.LOG_FILE_ON );
 						 //emit reportBatteryLevel(_calcStOfCharge(data->battery()));
-						 if( _enobioHandler != null )
-							 _enobioHandler.reportBatteryLevel( _calcStOfCharge(data.battery()) );						 						 						
+						 if( _enzoHandler != null )
+							 _enzoHandler.reportBatteryLevel( _calcStOfCharge(data.battery()) );						 						 						
 					 } // END: data->isBatteryPresent()
 
 					 if (data.isFirmwareVersionPresent())
@@ -2312,8 +2312,8 @@ public class DeviceManager implements Runnable {
 						 _protocol.setFirmwareVersion(_firmwareVersion);
 						 logger.info( "Firmware version is " + _firmwareVersion, Logger.LOG_FILE_ON);
 						 //emit reportFirmwareVersion(data->firmwareVersion(), data->get1000SPS());
-						 if( _enobioHandler != null )
-							 _enobioHandler.reportFirmwareVersion( data.firmwareVersion(), data.get1000SPS() );
+						 if( _enzoHandler != null )
+							 _enzoHandler.reportFirmwareVersion( data.firmwareVersion(), data.get1000SPS() );
 					 } // END: data->isFirmwareVersionPresent()
 
 					 if (data.isAccelerometerPresent())
@@ -2345,8 +2345,8 @@ public class DeviceManager implements Runnable {
 					 if (_deviceStatus != data.deviceStatus() )
 					 {
 						 _deviceStatus = data.deviceStatus();
-						 if( _enobioHandler != null)
-			               	 _enobioHandler.newDeviceStatus(_deviceStatus);
+						 if( _enzoHandler != null)
+			               	 _enzoHandler.newDeviceStatus(_deviceStatus);
 						 //emit newDeviceStatus(_deviceStatus);
 					 }
 					 _isDevicePresent = true;
@@ -2513,8 +2513,8 @@ public class DeviceManager implements Runnable {
 
 
 	                logger.info( "Close device. DeviceManager::_poll noDataCounter" + noDataCounter, Logger.LOG_FILE_ON);
-	                if( _enobioHandler != null)
-	                	 _enobioHandler.newDeviceStatus(_deviceStatus);
+	                if( _enzoHandler != null)
+	                	 _enzoHandler.newDeviceStatus(_deviceStatus);
 	                //emit newDeviceStatus(_deviceStatus);
 	
 	                return -1;
